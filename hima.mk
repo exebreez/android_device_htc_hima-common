@@ -250,3 +250,8 @@ PRODUCT_PACKAGES += \
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_hima
+
+# IR Blaster
+PRODUCT_PACKAGES += \
+    CIRModule \
+    htcirlibs \
