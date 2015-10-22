@@ -21,6 +21,26 @@ ifneq ($(filter hima himaul himawl himawhl, $(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := htcirlibs
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/framework/htcirlibs.jar
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .jar
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_CERTIFICATE := platfor
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := CIRModule
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/app/CIRModule.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 
 WCD9320_IMAGES := \
     wcd9320_anc.bin wcd9320_mad_audio.bin wcd9320_mbhc.bin
